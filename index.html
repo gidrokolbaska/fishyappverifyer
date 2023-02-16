@@ -7,8 +7,9 @@
     <title>Fishy App Email Verification</title>
     <script src="https://cdn.jsdelivr.net/npm/appwrite@10.2.0"></script>
     <script>
-        const { Client } = Appwrite;
+        const { Client, Account } = Appwrite;
         const client = new Client();
+        const account = new Account(client);
         client
     .setEndpoint('http://appwrite.fishyapp.ru/v1')
     .setProject('63dd026b480ab089a636');
@@ -17,7 +18,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get('userId');
 const secret = urlParams.get('secret');
 
-let promise = client.account.updateVerification(userId,secret);
+let promise = account.updateVerification(userId,secret);
 promise.then(function (res){
     console.log(res);
     document.getElementById("message").innerText = JSON.stringify(res);
