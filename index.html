@@ -17,7 +17,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get('userId');
 const secret = urlParams.get('secret');
 
-let promise = sdk.account.updateVerification(userId,secret);
+let promise = client.account.updateVerification(userId,secret);
 promise.then(function (res){
     console.log(res);
     document.getElementById("message").innerText = JSON.stringify(res);
