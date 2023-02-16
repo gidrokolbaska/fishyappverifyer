@@ -1,7 +1,7 @@
 const client = new Client();
 
 client
-    .setEndpoint('http://appwrite.fishyapp.ru/v1')
+    .setEndpoint('https://appwrite.fishyapp.ru/v1')
     .setProject('63dd026b480ab089a636');
 
 const urlParams = new URLSearchParams(window.location.search);
