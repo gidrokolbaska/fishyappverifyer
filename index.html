@@ -12,7 +12,8 @@
         const account = new Account(client);
         client
     .setEndpoint('https://appwrite.fishyapp.ru/v1')
-    .setProject('63dd026b480ab089a636');
+    .setProject('63dd026b480ab089a636')
+    .setSelfSigned();
 
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get('userId');
