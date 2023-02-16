@@ -1,5 +1,5 @@
 const sdk = new window.Appwrite();
-sdk.setEndpoint("https://appwrite.fishyapp.ru/v1").setProject("63dd026b480ab089a636");
+sdk.setEndpoint("http://appwrite.fishyapp.ru/v1").setProject("63dd026b480ab089a636");
 
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get('userId');
